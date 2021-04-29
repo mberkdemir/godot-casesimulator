@@ -1,0 +1,81 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes and Scripts/CaseScript.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/cubuk.png" type="Texture" id=2]
+
+[node name="Case Opening" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Case Scroll Container" type="ScrollContainer" parent="."]
+margin_top = 174.0
+margin_right = 1024.0
+margin_bottom = 426.0
+rect_clip_content = false
+hint_tooltip = "Good luck!"
+scroll_vertical_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Item Container" type="HBoxContainer" parent="Case Scroll Container"]
+custom_constants/separation = 10
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Item Cursor" type="TextureRect" parent="."]
+margin_left = 509.0
+margin_top = 174.0
+margin_right = 515.0
+margin_bottom = 424.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.2
+autostart = true
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Panel"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -111.0
+margin_top = -98.0
+margin_right = 111.0
+margin_bottom = -40.0
+text = "OK"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -125.0
+margin_top = -125.0
+margin_right = 125.0
+margin_bottom = 125.0
+rect_pivot_offset = Vector2( 125, 125 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="pressed" from="Panel/Button" to="." method="_on_ButtonPanel_pressed"]

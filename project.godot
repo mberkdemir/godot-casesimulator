@@ -18,10 +18,18 @@ _global_script_class_icons={
 config/name="Case Simulator"
 config/icon="res://icon.png"
 
+[autoload]
+
+Save="*res://Scenes and Scripts/Save.gd"
+
 [display]
 
 window/stretch/mode="2d"
 window/stretch/aspect="keep_width"
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
 
 [rendering]
 

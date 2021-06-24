@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Sprites/sample-case.png" type="Texture" id=1]
 [ext_resource path="res://Scenes and Scripts/Case.gd" type="Script" id=2]
+[ext_resource path="res://Sprites/mor.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/sari.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/kirmizi.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/mavi.png" type="Texture" id=6]
 
 [node name="Case" type="VBoxContainer"]
 anchor_right = 0.242188
@@ -12,6 +16,10 @@ script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": true
 }
+blue_items = [ ExtResource( 6 ) ]
+purple_items = [ ExtResource( 3 ) ]
+red_items = [ ExtResource( 5 ) ]
+special_items = [ ExtResource( 4 ) ]
 
 [node name="TextureRect" type="TextureRect" parent="."]
 margin_right = 248.0

@@ -39,7 +39,7 @@ __meta__ = {
 }
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.2
+wait_time = 0.09
 autostart = true
 
 [node name="Panel" type="Panel" parent="."]
